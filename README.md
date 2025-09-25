@@ -8,9 +8,13 @@ devtools::install_github("RuiCao34/RECKMON")
 # Example code
 
 set.seed(123)
+
 n <- 100
+
 p <- 10
+
 x_data <- matrix(rnorm(n * p), nrow = n, ncol = p)
+
 colnames(x_data) <- paste0("V", 1:p)
 
 y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] +      # Linear effects
