@@ -1,12 +1,12 @@
 Package: RECKMON
 Type: Package
-Title: What the Package Does (Title Case)
+Title: RECKMON, a novel reluctant modeling framework tailored for high-dimensional genomic prediction.
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
+      "Rui Cao",
+      email = "caorui3434@gmail.com",
+      role = c("cre")
     )
   )
 Description: More about what it does (maybe more than one line).
