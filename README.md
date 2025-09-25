@@ -1,3 +1,7 @@
+devtools::document()
+devtools::load_all()
+?predict_RECKMON
+
 set.seed(123)
 n <- 100
 p <- 10
@@ -27,3 +31,6 @@ print(model_fit$poly_feature)
 
 cat("Selected Gaussian kernel features:\n")
 print(model_fit$gaussian_feature)
+
+# Predict new observation
+predict_RECKMON(newx = matrix( rnorm(p*2), nrow = 2), model_fit)

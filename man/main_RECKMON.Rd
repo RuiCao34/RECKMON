@@ -59,6 +59,8 @@ A list object containing the results of the
   \item{theta_hat}{The estimated variance components (`sigma_e^2`, `sigma_g^2`) from the final Gaussian model.}
   \item{guassian_para}{The best value selected for the Gaussian kernel hyperparameter.}
   \item{r2}{The final residuals after the first two stages, used as input for the third stage.}
+  \item{x}{Fitted design matrix.}
+  \item{y}{Fitted outcome vector.}
 }
 \description{
 Implements a three-stage modeling process to capture linear, interaction, and non-linear (Gaussian kernel) effects in the data.

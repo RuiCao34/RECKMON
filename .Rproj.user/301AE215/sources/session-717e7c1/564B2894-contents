@@ -52,6 +52,8 @@
 #'   \item{theta_hat}{The estimated variance components (`sigma_e^2`, `sigma_g^2`) from the final Gaussian model.}
 #'   \item{guassian_para}{The best value selected for the Gaussian kernel hyperparameter.}
 #'   \item{r2}{The final residuals after the first two stages, used as input for the third stage.}
+#'   \item{x}{Fitted design matrix.}
+#'   \item{y}{Fitted outcome vector.}
 #'
 #' @export
 main_RECKMON <- function(x, y, poly_features = min(ncol(x), floor(nrow(x)/log(ncol(x)))), step_gaussian = 1,
@@ -239,7 +241,9 @@ main_RECKMON <- function(x, y, poly_features = min(ncol(x), floor(nrow(x)/log(nc
     lasso_fit2 = lasso_fit2,
     theta_hat = model_gaussian_output$theta,
     guassian_para = guassian_para_best,
-    r2 = r2
+    r2 = r2,
+    x = x,
+    y = y
   )
 
   # class(results) <- "msm_fit" # Assign a class for custom print methods, etc.
