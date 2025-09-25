@@ -22,9 +22,11 @@ y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] + x_data[, 3] * x_data[, 4] + sin(
 model_fit <- main_RECKMON(x = x_data, y = y_data, poly_features = 5, step_gaussian = 1, cv = 3, mc.cores = 1)
 
 cat("Selected interaction features:\n")
+
 print(model_fit$poly_feature)
 
 cat("Selected Gaussian kernel features:\n")
+
 print(model_fit$gaussian_feature)
 
 predict_RECKMON(newx = matrix( rnorm(p*2), nrow = 2), model_fit)
