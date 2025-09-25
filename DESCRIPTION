@@ -4,13 +4,13 @@ Title: RECKMON, a novel reluctant modeling framework tailored for high-dimension
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Rui Cao",
+      "Rui Cao", "Tianzhong Yang", "Weihua Guan"
       email = "caorui3434@gmail.com",
-      role = c("cre")
+      role = c("cre", "aut", "aut")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: RECKMON is a novel reluctant modeling framework tailored for high-dimensional genomic prediction.
+    It reluctantly models main, second-order, and higher-order predictor-response effects, leveraging an efficient kernel-based feature selection method to identify non-linear predictors with computational efficacy.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
