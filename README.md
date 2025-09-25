@@ -17,19 +17,9 @@ x_data <- matrix(rnorm(n * p), nrow = n, ncol = p)
 
 colnames(x_data) <- paste0("V", 1:p)
 
-y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] +     
-          x_data[, 3] * x_data[, 4] +               
-          sin(pi * x_data[, 5]) +                   
-          rnorm(n, 0, 0.5)                          
+y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] + x_data[, 3] * x_data[, 4] + sin(pi * x_data[, 5]) + rnorm(n, 0, 0.5)                          
 
-model_fit <- main_RECKMON(                         
-  x = x_data,
-  y = y_data,
-  poly_features = 5,
-  step_gaussian = 1,
-  cv = 3,
-  mc.cores = 1
-)
+model_fit <- main_RECKMON(x = x_data, y = y_data, poly_features = 5, step_gaussian = 1, cv = 3, mc.cores = 1)
 
 cat("Selected interaction features:\n")
 print(model_fit$poly_feature)
