@@ -17,17 +17,17 @@ x_data <- matrix(rnorm(n * p), nrow = n, ncol = p)
 
 colnames(x_data) <- paste0("V", 1:p)
 
-y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] +      # Linear effects
-          x_data[, 3] * x_data[, 4] +               # Interaction effect
-          sin(pi * x_data[, 5]) +                   # Non-linear effect
-          rnorm(n, 0, 0.5)                          # Noise (CORRECTED: using 'n')
+y_data <- 2 * x_data[, 1] - 1.5 * x_data[, 2] +     
+          x_data[, 3] * x_data[, 4] +               
+          sin(pi * x_data[, 5]) +                   
+          rnorm(n, 0, 0.5)                          
 
-model_fit <- main_RECKMON(                          # CORRECTED: Function name
+model_fit <- main_RECKMON(                         
   x = x_data,
   y = y_data,
   poly_features = 5,
   step_gaussian = 1,
-  cv = 3, # Use 3 folds for a quick example
+  cv = 3,
   mc.cores = 1
 )
 
