@@ -7,6 +7,8 @@ devtools::install_github("RuiCao34/RECKMON")
 
 # Example code
 
+library(RECKMON)
+
 set.seed(123)
 
 n <- 100
