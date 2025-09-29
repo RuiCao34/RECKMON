@@ -1,13 +1,11 @@
 Package: RECKMON
 Type: Package
-Title: RECKMON, a novel reluctant modeling framework tailored for high-dimensional genomic prediction.
+Title: RECKMON, a novel reluctant modeling framework tailored for high-dimensional genomic prediction
 Version: 0.1.0
 Authors@R: c(
-    person(
-      "Rui Cao", "Tianzhong Yang", "Weihua Guan"
-      email = "caorui3434@gmail.com",
-      role = c("cre", "aut", "aut")
-    )
+    person("Rui", "Cao", email = "caorui3434@gmail.com", role = c("cre", "aut")),
+    person("Tianzhong", "Yang", role = "aut"),
+    person("Weihua", "Guan", role = "aut")
   )
 Description: RECKMON is a novel reluctant modeling framework tailored for high-dimensional genomic prediction.
     It reluctantly models main, second-order, and higher-order predictor-response effects, leveraging an efficient kernel-based feature selection method to identify non-linear predictors with computational efficacy.
